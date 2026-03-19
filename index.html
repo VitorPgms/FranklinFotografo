@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franklin Xavier — Fotógrafo Documental</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Playfair Display + Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+
+      <!-- Logo / Nome -->
+      <a href="#" class="navbar__logo">Franklin Xavier</a>
+
+      <!-- Menu Desktop -->
+      <nav class="navbar__menu" id="navMenu" aria-label="Navegação principal">
+        <a href="#portfolio" class="navbar__link">Portfolio</a>
+        <a href="#sobre"     class="navbar__link">Sobre mim</a>
+        <a href="#contato"   class="navbar__link">Contato</a>
+      </nav>
+
+      <!-- Hamburguer (mobile) -->
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+  <!-- ===================================================== -->
+
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+      <div class="hero__container">
+
+        <!-- Coluna esquerda: texto -->
+        <div class="hero__text" data-animate>
+          <h1 class="hero__title">
+            Sensibilidades,<br />
+            <em>Autenticidade</em>
+          </h1>
+          <p class="hero__desc">
+            Documento emoções humanas através da lente, criando
+            memórias visuais que permanecem.
+          </p>
+          <a href="#portfolio" class="btn btn--primary">Ver Trabalhos</a>
+        </div>
+
+        <!-- Coluna direita: imagem principal -->
+        <div class="hero__image-wrap" data-animate data-delay="200">
+          <div class="hero__image-frame">
+            <img
+              src="img/imagem-hero.png"
+              alt="Fotografia documental — retrato emotivo"
+              class="hero__img"
+              loading="eager"
+            />
+          </div>
+          <!-- Elemento decorativo -->
+          <div class="hero__deco"></div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ===================================================== -->
+
+
+    <!-- ===================== SOBRE ===================== -->
+    <section class="sobre" id="sobre">
+      <div class="sobre__container">
+
+        <!-- Nome dividido nos lados -->
+        <div class="sobre__name-split" data-animate>
+          <span class="sobre__name-left">Franklin</span>
+
+          <div class="sobre__photo-wrap">
+            <img
+              src="img/Gemini_Generated_Image_uzxueiuzxueiuzxu (1).png"
+              alt="Franklin Xavier segurando uma câmera"
+              class="sobre__photo"
+              loading="lazy"
+            />
+          </div>
+
+          <span class="sobre__name-right">Xavier</span>
+        </div>
+
+        <!-- Bio -->
+        <p class="sobre__bio" data-animate data-delay="150">
+          Sou Franklin Xavier, fotógrafo documental. Registro histórias
+          reais, emoções simples e momentos que não pedem pose —
+          apenas presença.
+        </p>
+
+      </div>
+    </section>
+    <!-- ===================================================== -->
+
+
+    <!-- ===================== PORTFÓLIO ===================== -->
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio__container">
+
+        <!-- Título -->
+        <div class="portfolio__header" data-animate>
+          <h2 class="section-title">Portfólio</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Grid editorial -->
+        <div class="portfolio__grid">
+
+          <!-- Card 1 — Eventos (vertical, coluna esquerda) -->
+          <div class="portfolio__card portfolio__card--tall" data-animate data-delay="0">
+            <img
+              src="img/evento.png"
+              alt="Fotografia de evento"
+              class="portfolio__img"
+              loading="lazy"
+            />
+            <div class="portfolio__overlay">
+              <span class="portfolio__label portfolio__label--rotated">Eventos</span>
+            </div>
+          </div>
+
+          <!-- Coluna central (dois cards empilhados) -->
+          <div class="portfolio__col-center">
+
+            <!-- Card 2 — Batismo -->
+            <div class="portfolio__card" data-animate data-delay="100">
+              <img
+                src="img/Batismo.png"
+                alt="Fotografia de batismo"
+                class="portfolio__img"
+                loading="lazy"
+              />
+              <div class="portfolio__overlay">
+                <span class="portfolio__label">Batismo</span>
+              </div>
+            </div>
+
+            <!-- Card 3 — Aniversário -->
+            <div class="portfolio__card" data-animate data-delay="200">
+              <img
+                src="img/aniversario.png"
+                alt="Fotografia de aniversário em família"
+                class="portfolio__img"
+                loading="lazy"
+              />
+              <div class="portfolio__overlay">
+                <span class="portfolio__label">Aniversário</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- /coluna central -->
+
+          <!-- Card 4 — Ensaio (vertical, coluna direita) -->
+          <div class="portfolio__card portfolio__card--tall" data-animate data-delay="300">
+            <img
+              src="img/ensaio.png"
+              alt="Ensaio fotográfico — retrato"
+              class="portfolio__img portfolio__ensaio"
+              loading="lazy"
+            />
+            <div class="portfolio__overlay">
+              <span class="portfolio__label portfolio__label--rotated">Ensaio</span>
+            </div>
+          </div>
+
+        </div>
+        <!-- /grid -->
+
+      </div>
+    </section>
+    <!-- ===================================================== -->
+
+
+    <!-- ===================== CALL TO ACTION ===================== -->
+    <section class="cta" id="contato">
+      <!-- Imagem de fundo com overlay -->
+      <div class="cta__bg">
+        <img
+          src="img/ctaFinal.png"
+          alt="Câmera fotográfica — fundo"
+          class="cta__bg-img"
+          loading="lazy"
+        />
+        <div class="cta__overlay"></div>
+      </div>
+
+      <!-- Conteúdo sobre a imagem -->
+      <div class="cta__content" data-animate>
+        <h2 class="cta__title">Vamos conversar<br /><em>sobre sua história</em></h2>
+        <p class="cta__desc">
+          Entre histórias de amor, laços de família, ou jornadas pessoais —
+          me diga o que te toca, e faremos disso uma memória visual.
+        </p>
+        <a href="mailto:contato@franklinxavier.com" class="btn btn--light">Contate-nos</a>
+      </div>
+    </section>
+    <!-- ===================================================== -->
+
+  </main>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <span class="footer__name">Franklin Xavier</span>
+      <span class="footer__copy">© 2025 — Todos os direitos reservados</span>
+    </div>
+  </footer>
+  <!-- ===================================================== -->
+
+
+  <script src="script.js"></script>
+</body>
+</html>
