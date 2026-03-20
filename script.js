@@ -5,6 +5,31 @@
 
 'use strict';
 
+/*Importando a biblioteca GSAP e seus plugins */
+window.addEventListener("load", () => {
+
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+
+  ScrollSmoother.create({
+    smooth: 1.2,
+    effects: true,
+    smoothTouch: 0.1
+  });
+
+});
+
+
+
+/* Animando o CTA */
+
+function animarPagina() {
+  gsap.from ("cta",{
+    opacity: 0,
+    duration: 1
+  })
+}
+
+
 /* ── 1. NAVBAR: fundo ao rolar + fechar menu mobile ────────── */
 (function initNavbar() {
   const navbar     = document.getElementById('navbar');
@@ -67,7 +92,8 @@
 
       const targetY = target.getBoundingClientRect().top + window.scrollY - navH;
 
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
+      ScrollSmoother.get().scrollTo(target, true);
+
     });
   });
 })();
@@ -178,7 +204,7 @@
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-})();
+})(); 
 
 
 /* ── 6. INDICADOR DE ANO automático no footer ──────────────── */
