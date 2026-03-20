@@ -23,10 +23,7 @@ window.addEventListener("load", () => {
 /* Animando o CTA */
 
 function animarPagina() {
-  gsap.from ("cta",{
-    opacity: 0,
-    duration: 1
-  })
+
 }
 
 
@@ -181,30 +178,6 @@ function animarPagina() {
   });
 })();
 
-
-/* ── 5. PARALLAX SUAVE na seção CTA ────────────────────────── */
-(function initParallax() {
-  const ctaBg = document.querySelector('.cta__bg-img');
-  if (!ctaBg) return;
-
-  /* Só aplica parallax em desktop (evita jank no mobile) */
-  const mq = window.matchMedia('(min-width: 769px)');
-
-  function onScroll() {
-    if (!mq.matches) return;
-    const cta  = ctaBg.closest('.cta');
-    const rect = cta.getBoundingClientRect();
-    const vh   = window.innerHeight;
-
-    /* Calcula progresso de 0 a 1 conforme CTA entra na viewport */
-    const progress = 1 - (rect.top / vh);
-    const offset   = Math.round(progress * 40); /* máx 40px */
-
-    ctaBg.style.transform = `translateY(${offset}px)`;
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-})(); 
 
 
 /* ── 6. INDICADOR DE ANO automático no footer ──────────────── */
