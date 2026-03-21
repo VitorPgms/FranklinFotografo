@@ -20,11 +20,17 @@ window.addEventListener("load", () => {
 
 
 
-/* Animando o CTA */
-
-function animarPagina() {
-
-}
+/* Animando nome */
+gsap.to(".sobre__name-left, .sobre__name-right", {
+  y: 200,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".sobre",
+    start: "top 70%",
+    end: "bottom 40%",
+    scrub: true
+  }
+});
 
 
 /* ── 1. NAVBAR: fundo ao rolar + fechar menu mobile ────────── */
