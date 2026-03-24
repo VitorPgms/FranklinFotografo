@@ -13,23 +13,34 @@ window.addEventListener("load", () => {
   ScrollSmoother.create({
     smooth: 1.2,
     effects: true,
-    smoothTouch: 0.1
+    smoothTouch: 0
   });
 
 });
 
 
 
-/* Animando nome */
-gsap.to(".sobre__name-left, .sobre__name-right", {
-  y: 200,
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".sobre",
-    start: "top 70%",
-    end: "bottom 40%",
-    scrub: true
-  }
+/* Animando nome só desktop*/
+let mm = gsap.matchMedia();
+
+
+mm.add("(min-width: 1025px)", () => {
+
+  let anim = gsap.to(".sobre__name-left, .sobre__name-right", {
+    y: 160,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".sobre",
+      start: "top 80%",
+      end: "bottom 40%",
+      scrub: true
+    }
+  });
+
+  return () => {
+    anim.kill(); // remove animação quando sair do breakpoint
+  };
+
 });
 
 
